@@ -1,0 +1,16 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ExplodedProduct } from "@/components/ExplodedProduct";
+import { VisualArchive } from "@/components/VisualArchive";
+import { designTargets } from "@/lib/data";
+
+export const metadata: Metadata = { title: "Vanta One", description: "Explore the Vanta One industrial-design and adaptive-interface concept." };
+
+export default function VantaOnePage(){return <main>
+  <section className="page-hero product-page-hero"><div><span className="section-index">PRODUCT / 01</span><h1>Vanta One</h1><p>A non-invasive adaptive-interface concept shaped around quiet hardware, personal baselines, and local computation.</p><div className="hero-actions"><Link className="primary-button" href="/access">Request access ↗</Link><Link className="text-button" href="/science">Read the science model →</Link></div></div><div className="page-product-render photo-render"><img src="/media/vanta-product-studio.png" alt="Photorealistic Vanta One product concept render"/><span>PHOTOREAL CONCEPT STUDY / NOT SHIPPING HARDWARE</span></div></section>
+  <section className="section"><div className="split-heading"><h2>Industrial design that gets out of the way.</h2><p>Vanta One is imagined as a low-profile wearable built around a lightweight structural spine, discreet non-invasive contact points, and a local compute core. The design is intentionally calm, dark, and wearable rather than robotic.</p></div><div className="image-triptych photo-triptych"><figure><img src="/media/vanta-spine-macro.png" alt="Photorealistic structural spine detail study of Vanta One"/><figcaption>STRUCTURAL SPINE / CONCEPT STUDY</figcaption></figure><figure><img src="/media/vanta-sensor-macro.png" alt="Photorealistic sensor-interface study of Vanta One worn behind the ear"/><figcaption>SENSOR INTERFACE / CONCEPT STUDY</figcaption></figure><figure><img src="/media/vanta-core-cutaway.png" alt="Photorealistic Vanta One local-compute cutaway concept"/><figcaption>LOCAL CORE / CONCEPT STUDY</figcaption></figure></div></section>
+  <section className="section"><div className="section-index">ON-BODY + PRODUCT ARCHIVE</div><VisualArchive /></section>
+  <section className="section"><div className="section-index">SYSTEM ARCHITECTURE</div><ExplodedProduct /><div className="spec-strip">{designTargets.map(item=><div key={item.label}><strong>{item.value}</strong><span>{item.label}</span><small>{item.note}</small></div>)}</div></section>
+  <section className="product-lifestyle-band"><img src="/media/vanta-wear-close.png" alt="Close photorealistic on-body Vanta One concept study"/><div><small>FIT / CONTACT / MATERIAL</small><h2>Designed to feel closer to jewelry than instrumentation.</h2><p>The concept studies emphasize a low visual profile, dark technical materials, and minimal status light—enough to communicate state without turning the wearer into a walking display.</p></div></section>
+  <section className="disclosure-band"><strong>Concept disclosure</strong><p>Vanta One is presented as a product and interface concept. Sensor count, latency, battery life, release timing, and other technical figures are design targets unless and until independently validated on functioning hardware. Photorealistic imagery is concept visualization, not documentation of a commercial device.</p></section>
+</main>}
