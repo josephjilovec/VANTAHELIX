@@ -24,5 +24,29 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body><SiteHeader />{children}<SiteFooter /><Analytics /><SpeedInsights /></body></html>;
+  return <html lang="en"><body>
+    <style>{`
+      @media (min-width: 901px) {
+        .site-header {
+          grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+        }
+        .site-header .desktop-nav {
+          grid-column: 1;
+          grid-row: 1;
+          justify-self: start;
+        }
+        .site-header .brand {
+          grid-column: 2;
+          grid-row: 1;
+          justify-self: center;
+        }
+        .site-header .nav-actions {
+          grid-column: 3;
+          grid-row: 1;
+          justify-self: end;
+        }
+      }
+    `}</style>
+    <SiteHeader />{children}<SiteFooter /><Analytics /><SpeedInsights />
+  </body></html>;
 }
