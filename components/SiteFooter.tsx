@@ -3,9 +3,7 @@ import Link from "next/link";
 export function SiteFooter() {
   return (
     <footer className="site-footer">
-<div className="jj-venture-nav" style={{margin:'0 auto 1.5rem',padding:'1rem 0',textAlign:'center',fontSize:'.78rem',letterSpacing:'.04em',opacity:.78}}><a href="https://www.josephjilovec.com/ventures" style={{color:'inherit',textDecoration:'none'}}>A Joseph Jilovec Venture</a><span aria-hidden="true" style={{margin:'0 .6rem'}}>·</span><a href="https://www.josephjilovec.com/ventures" style={{color:'inherit',textDecoration:'none',fontWeight:600}}>Explore the Venture Studio →</a></div>
-
-      <div className="footer-grid">
+<div className="footer-grid">
         <div>
           <div className="brand footer-brand"><span className="brand-symbol">V/H</span><span>VANTA HELIX</span></div>
           <p>Intelligence, made instinctive.</p>
@@ -17,6 +15,7 @@ export function SiteFooter() {
         <span>© 2026 VANTA HELIX SYSTEMS</span>
         <span>Concept platform · Product specifications shown are design targets, not verified shipping specifications.</span>
       </div>
-    </footer>
+    <div className="jj-venture-nav" style={{borderTop:'1px solid rgba(255,255,255,.10)',padding:'1rem 1.25rem 1.15rem',textAlign:'center',fontSize:'.78rem',letterSpacing:'.045em'}}><a href="https://www.josephjilovec.com/ventures" style={{color:'#E7C45A',textDecoration:'none',fontWeight:700}}>A Joseph Jilovec Venture</a><span aria-hidden="true" style={{color:'#E7C45A',margin:'0 .65rem',opacity:.7}}>•</span><a href="https://www.josephjilovec.com/ventures" style={{color:'#E7C45A',textDecoration:'none',fontWeight:800}}>Explore the Venture Studio →</a></div>
+</footer>
   );
 }
