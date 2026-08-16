@@ -1,8 +1,8 @@
 export const site = {
   name: "VANTA HELIX",
-  title: "VANTA HELIX — Intelligence, made instinctive",
+  title: "VANTA HELIX — Adaptive interfaces. Private intelligence.",
   description:
-    "Vanta Helix is an adaptive neural-interface concept exploring non-invasive sensing, local intelligence, and environments that respond to attention.",
+    "Vanta Helix is an adaptive-interface research concept exploring non-invasive sensing, local intelligence, privacy architecture, and environments that respond without turning people into data products.",
   url: "https://vantahelix.vercel.app",
   email: "realjjemail@gmail.com"
 };
