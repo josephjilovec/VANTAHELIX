@@ -1,39 +1,40 @@
 import Link from "next/link";
-import { HeroVisual } from "@/components/HeroVisual";
+import { AmbientInterfaceCanvas } from "@/components/AmbientInterfaceCanvas";
 import { SignalDemo } from "@/components/SignalDemo";
 import { ExplodedProduct } from "@/components/ExplodedProduct";
 import { ContextGallery } from "@/components/ContextGallery";
 import { VisualArchive } from "@/components/VisualArchive";
+import { PrivacyProtocolDiagram } from "@/components/PrivacyProtocolDiagram";
 import { designTargets, principles } from "@/lib/data";
 
 export default function Home() {
   return (
     <main>
-      <section className="hero-section cinematic-hero">
+      <section className="hero-section cinematic-hero helix-hero">
         <div className="hero-grid-lines" aria-hidden="true" />
         <div className="hero-copy">
-          <div className="eyebrow"><span>INTRODUCING VANTA ONE</span><b>CONCEPT SYSTEM</b></div>
-          <h1>Intelligence,<br/><em>made instinctive.</em></h1>
-          <p>A premium adaptive-interface concept exploring how discreet, non-invasive sensing and local intelligence could help spaces respond to the rhythm of attention.</p>
+          <div className="eyebrow"><span>VANTA HELIX / ADAPTIVE INTERFACE RESEARCH</span><b>LOCAL-FIRST SYSTEMS</b></div>
+          <h1>Interfaces that adapt.<br/><em>Privacy that stays local.</em></h1>
+          <p>Vanta Helix explores adaptive interfaces, non-invasive neural-adjacent sensing, and edge intelligence designed to respond to attention without turning private human signals into a standing cloud asset.</p>
           <div className="hero-actions">
-            <Link className="primary-button" href="/access">Enter the first circle <span>↗</span></Link>
-            <Link className="text-button" href="/vanta-one">Discover Vanta One <span>↓</span></Link>
+            <Link className="primary-button" href="/research">Enter the research gateway <span>↗</span></Link>
+            <Link className="text-button" href="/vanta-one">Explore Vanta One <span>↓</span></Link>
           </div>
           <div className="hero-signals">
-            <div><small>01</small><strong>Non-invasive<br/>neural sensing</strong></div>
-            <div><small>02</small><strong>Adaptive<br/>signal engine</strong></div>
-            <div><small>03</small><strong>Private by<br/>architecture</strong></div>
+            <div><small>01</small><strong>Adaptive<br/>interface field</strong></div>
+            <div><small>02</small><strong>Local edge<br/>intelligence</strong></div>
+            <div><small>03</small><strong>Selective<br/>disclosure</strong></div>
           </div>
         </div>
-        <HeroVisual />
+        <AmbientInterfaceCanvas />
       </section>
 
-      <section className="editorial-manifesto">
+      <section className="editorial-manifesto helix-manifesto">
         <div className="section-index">01 — THE PREMISE</div>
-        <p className="manifesto-statement">Your best thinking doesn’t arrive on command. <span>Vanta learns the conditions that bring it closer.</span></p>
+        <p className="manifesto-statement">The next interface should understand context without demanding more attention. <span>And it should not need to own you to know you.</span></p>
         <div className="manifesto-foot">
-          <p>Vanta One is imagined as a quiet wearable layer that reads subtle physiological and neural patterns, learns an individual baseline, and gives the surrounding environment a chance to respond without demanding another screen.</p>
-          <div className="signal-line"><span>NEURAL INPUT</span><i/><span>ADAPTIVE RESPONSE</span></div>
+          <p>Vanta Helix is a research platform for a quieter class of computing: adaptive interfaces that interpret local context, work from a personal baseline, and expose explicit boundaries around memory, transmission, and control.</p>
+          <div className="signal-line"><span>PRIVATE INPUT</span><i/><span>BOUNDED RESPONSE</span></div>
         </div>
       </section>
 
@@ -47,8 +48,8 @@ export default function Home() {
         </div>
         <div className="product-object-copy">
           <div className="section-index">02 — VANTA ONE</div>
-          <h2>Quiet hardware.<br/><em>Extraordinary awareness.</em></h2>
-          <p>The refreshed visual system brings back the original site’s product-first feel: Vanta One should read like believable, premium wearable hardware rather than an abstract technology diagram.</p>
+          <h2>Quiet hardware.<br/><em>Private intelligence.</em></h2>
+          <p>Vanta One is the wearable expression of the research thesis: discreet sensing, local interpretation, and an interface that moves toward the edge of awareness instead of asking for another screen.</p>
           <div className="spec-list-home">
             {designTargets.slice(0,3).map((item)=><div key={item.label}><strong>{item.value}</strong><span>{item.label}</span><small>{item.note}</small></div>)}
           </div>
@@ -64,7 +65,7 @@ export default function Home() {
 
       <section className="section product-system-section">
         <div className="section-index">04 — SYSTEM ARCHITECTURE</div>
-        <div className="split-heading"><h2>Three layers.<br/>One quiet system.</h2><p>The technical diagrams remain where they are strongest: explaining the concept stack behind the photorealistic product story—sensing at the body, interpretation on the device, and contextual response around the user.</p></div>
+        <div className="split-heading"><h2>Sense locally.<br/>Interpret privately.<br/>Adapt quietly.</h2><p>The stack separates sensing at the body, interpretation on the device, and contextual response around the user. The separation is intentional: each layer should know less than the layer before it.</p></div>
         <ExplodedProduct />
         <div className="spec-strip">{designTargets.map(item => <div key={item.label}><strong>{item.value}</strong><span>{item.label}</span><small>{item.note}</small></div>)}</div>
       </section>
@@ -82,7 +83,7 @@ export default function Home() {
 
       <section className="section demo-section">
         <div className="section-index">06 — LIVE ADAPTATION</div>
-        <div className="split-heading"><h2>Your state,<br/><em>in living color.</em></h2><p>Switch modes to see how a Vanta environment could respond to different cognitive contexts. This is an interaction demo—not a live neural measurement.</p></div>
+        <div className="split-heading"><h2>Context changes.<br/><em>The interface follows.</em></h2><p>Switch modes to see how a Vanta environment could respond to different cognitive contexts. This is an interaction demo—not a live neural measurement.</p></div>
         <SignalDemo />
       </section>
 
@@ -92,15 +93,26 @@ export default function Home() {
         <ContextGallery />
       </section>
 
-      <section className="privacy-section-home">
+      <section className="section home-protocol-section">
+        <div className="section-index">08 — PRIVACY PROTOCOL</div>
+        <div className="split-heading"><h2>Make the boundary visible.</h2><p>Click through the proposed privacy model: edge processing, local memory sandboxing, selective proof, policy gating, and a bounded context output.</p></div>
+        <PrivacyProtocolDiagram compact />
+      </section>
+
+      <section className="privacy-section-home helix-privacy-home">
         <div className="privacy-visual hybrid-privacy-visual">
           <img className="privacy-photo" src="/media/vanta-core-cutaway.png" alt="Photorealistic cutaway concept showing local electronics inside the Vanta One wearable" />
           <img className="privacy-diagram" src="/product/privacy-core.svg" alt="Diagram of local-first encrypted processing architecture" />
         </div>
-        <div className="privacy-copy"><div className="section-index">08 — SOVEREIGN INTELLIGENCE</div><h2>Your mind is not a data source.</h2><p>The concept is local-first by design: raw neural signals should not become advertising inventory. Vanta’s privacy thesis is that calibration, inference, and erase controls belong with the user.</p><div className="principle-list">{principles.map(([title,copy],i)=><div key={title}><span>0{i+1}</span><div><strong>{title}</strong><p>{copy}</p></div></div>)}</div><Link className="text-button" href="/privacy">Read the privacy architecture ↗</Link></div>
+        <div className="privacy-copy"><div className="section-index">09 — SOVEREIGN INTELLIGENCE</div><h2>Your mind is not a data source.</h2><p>The concept is local-first by design: raw neural-adjacent signals should not become advertising inventory. Calibration, inference, memory, and erase controls belong as close to the user as the hardware allows.</p><div className="principle-list">{principles.map(([title,copy],i)=><div key={title}><span>0{i+1}</span><div><strong>{title}</strong><p>{copy}</p></div></div>)}</div><Link className="text-button" href="/privacy">Inspect the privacy architecture ↗</Link></div>
       </section>
 
-      <section className="access-band"><div><small>PRIVATE CONCEPT RELEASE</small><h2>Be among the first<br/>to think with Vanta.</h2><p>Join the private concept-access list for prototype updates, design studies, and future calibration opportunities.</p></div><Link className="primary-button light" href="/access">Request private access <span>↗</span></Link></section>
+      <section className="research-home-band">
+        <div className="research-home-copy"><small>RESEARCH PAPER / COLLABORATOR GATEWAY</small><h2>Read the privacy architecture brief.</h2><p>A six-page technical concept note covering local processing, selective-proof research, memory sandboxing, data minimization, and the validation work required before production claims.</p></div>
+        <div className="research-home-meta"><span>PDF / 06 PAGES</span><span>CONCEPT / 2026</span><Link className="primary-button" href="/research">Open research gateway <b>↗</b></Link></div>
+      </section>
+
+      <section className="access-band"><div><small>PRIVATE CONCEPT RELEASE</small><h2>Help shape what comes next.</h2><p>Join the private concept-access list for prototype updates, design studies, and future calibration opportunities.</p></div><Link className="primary-button light" href="/access">Request private access <span>↗</span></Link></section>
     </main>
   );
 }

@@ -7,7 +7,8 @@ const links = [
   ["Vanta One", "/vanta-one"],
   ["Science", "/science"],
   ["Experience", "/experience"],
-  ["Privacy", "/privacy"]
+  ["Privacy", "/privacy"],
+  ["Research", "/research"]
 ] as const;
 
 export function SiteHeader() {
@@ -23,9 +24,7 @@ export function SiteHeader() {
       </nav>
       <div className="nav-actions">
         <Link className="access-link" href="/access">Request access <span>↗</span></Link>
-        <button className="menu-button" onClick={() => setOpen(v => !v)} aria-expanded={open} aria-label="Toggle navigation">
-          <span /><span />
-        </button>
+        <button className="menu-button" onClick={() => setOpen(v => !v)} aria-expanded={open} aria-label="Toggle navigation"><span /><span /></button>
       </div>
       {open && <nav className="mobile-nav" aria-label="Mobile navigation">
         {links.map(([label, href]) => <Link key={href} href={href} onClick={() => setOpen(false)}>{label}</Link>)}
