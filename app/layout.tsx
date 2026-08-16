@@ -5,7 +5,9 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { site } from "@/lib/site";
 import "./globals.css";
-import "./vanta-helix.css";
+import "./vanta-helix-core.css";
+import "./vanta-helix-privacy.css";
+import "./vanta-helix-research.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
