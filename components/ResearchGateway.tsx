@@ -3,7 +3,7 @@
 import { FormEvent, useState } from "react";
 
 const FORM_ENDPOINT = "https://formsubmit.co/ajax/realjjemail@gmail.com";
-const PDF_PATH = "/research/vanta-helix-privacy-architecture-brief.pdf";
+const PDF_PATH = "/research/brief";
 
 export function ResearchGateway() {
   const [status, setStatus] = useState<"idle" | "sending" | "unlocked" | "error">("idle");
