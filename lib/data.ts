@@ -5,7 +5,7 @@ export const pillars = [
     title: "Sense",
     short: "Non-invasive sensing",
     copy: "A dry-contact concept designed to observe neural and physiological patterns without breaking skin.",
-    image: "/media/vanta-sensor-macro.png"
+    image: "/media/vanta-sensor-macro.webp"
   },
   {
     id: "interpret",
@@ -13,7 +13,7 @@ export const pillars = [
     title: "Interpret",
     short: "Local signal intelligence",
     copy: "A private edge-compute concept that learns a personal baseline and looks for meaningful change rather than generic labels.",
-    image: "/media/vanta-core-cutaway.png"
+    image: "/media/vanta-core-cutaway.webp"
   },
   {
     id: "adapt",
@@ -21,7 +21,7 @@ export const pillars = [
     title: "Adapt",
     short: "Environmental response",
     copy: "A connected-space layer designed to translate attention context into lighting, sound, interruption control, and other environmental changes.",
-    image: "/media/vanta-deep-work.png"
+    image: "/media/vanta-deep-work.webp"
   }
 ] as const;
 
@@ -33,9 +33,9 @@ export const designTargets = [
 ] as const;
 
 export const contexts = [
-  { title: "Deep work", copy: "Reduce interruption and tune the environment around a sustained focus window.", image: "/media/vanta-deep-work.png" },
-  { title: "Creative exploration", copy: "Favor novelty, associative thinking, and a looser ambient profile during ideation.", image: "/media/vanta-create.png" },
-  { title: "Recovery", copy: "Downshift stimulation and make room for decompression after demanding cognitive work.", image: "/media/vanta-recover.png" }
+  { title: "Deep work", copy: "Reduce interruption and tune the environment around a sustained focus window.", image: "/media/vanta-deep-work.webp" },
+  { title: "Creative exploration", copy: "Favor novelty, associative thinking, and a looser ambient profile during ideation.", image: "/media/vanta-create.webp" },
+  { title: "Recovery", copy: "Downshift stimulation and make room for decompression after demanding cognitive work.", image: "/media/vanta-recover.webp" }
 ] as const;
 
 export const principles = [

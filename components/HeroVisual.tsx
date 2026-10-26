@@ -1,5 +1,8 @@
 "use client";
 
+import { ProductStudyImage } from "@/components/ProductStudyImage";
+
+
 import { useEffect, useRef, useState } from "react";
 
 export function HeroVisual() {
@@ -28,7 +31,7 @@ export function HeroVisual() {
   return (
     <div className="hero-visual cinematic" ref={ref}>
       <div className="hero-photo" style={{ transform: `scale(1.025) translate3d(${tilt.x}px, ${tilt.y}px, 0)` }}>
-        <img src="/media/vanta-wear-close.png" alt="Photorealistic concept of Vanta One worn discreetly behind the ear" />
+        <ProductStudyImage loading="eager" fetchPriority="high" sizes="(max-width: 900px) 100vw, 55vw" src="/media/vanta-wear-close.webp" alt="Photorealistic concept of Vanta One worn discreetly behind the ear" />
       </div>
       <div className="hero-photo-shade" />
       <div className="hero-scan" aria-hidden="true" />

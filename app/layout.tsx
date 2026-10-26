@@ -17,9 +17,9 @@ export const metadata: Metadata = {
     url: site.url,
     siteName: site.name,
     type: "website",
-    images: [{ url: "/media/vanta-wear-close.png", width: 1448, height: 1086, alt: "Vanta Helix — Vanta One concept study" }]
+    images: [{ url: "/media/vanta-wear-close.webp", width: 1448, height: 1086, alt: "Vanta Helix — Vanta One concept study" }]
   },
-  twitter: { card: "summary_large_image", title: site.title, description: site.description, images: ["/media/vanta-wear-close.png"] },
+  twitter: { card: "summary_large_image", title: site.title, description: site.description, images: ["/media/vanta-wear-close.webp"] },
   robots: { index: true, follow: true }
 };
 

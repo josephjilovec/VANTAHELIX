@@ -1,3 +1,4 @@
+import { ProductStudyImage } from "@/components/ProductStudyImage";
 import Link from "next/link";
 import { HeroVisual } from "@/components/HeroVisual";
 import { SignalDemo } from "@/components/SignalDemo";
@@ -39,7 +40,7 @@ export default function Home() {
 
       <section className="product-object-section" id="vanta-one">
         <div className="product-object-media">
-          <img src="/media/vanta-product-studio.png" alt="Photorealistic Vanta One wearable concept shown as a premium studio product study" />
+          <ProductStudyImage src="/media/vanta-product-studio.webp" alt="Photorealistic Vanta One wearable concept shown as a premium studio product study" />
           <div className="object-hotspot hotspot-one"><b>01</b><span>Dry sensor interface</span></div>
           <div className="object-hotspot hotspot-two"><b>02</b><span>Dark titanium spine</span></div>
           <div className="object-hotspot hotspot-three"><b>03</b><span>Local compute core</span></div>
@@ -48,7 +49,7 @@ export default function Home() {
         <div className="product-object-copy">
           <div className="section-index">02 — VANTA ONE</div>
           <h2>Quiet hardware.<br/><em>Extraordinary awareness.</em></h2>
-          <p>The refreshed visual system brings back the original site’s product-first feel: Vanta One should read like believable, premium wearable hardware rather than an abstract technology diagram.</p>
+          <p>Vanta One explores a discreet behind-the-ear format with non-invasive contact points and local processing. The proposed design brings sensing close to the wearer while keeping everyday interaction simple.</p>
           <div className="spec-list-home">
             {designTargets.slice(0,3).map((item)=><div key={item.label}><strong>{item.value}</strong><span>{item.label}</span><small>{item.note}</small></div>)}
           </div>
@@ -58,19 +59,19 @@ export default function Home() {
 
       <section className="section visual-library-section">
         <div className="section-index">03 — PRODUCT STUDIES</div>
-        <div className="split-heading"><h2>Hardware that looks like it belongs in the world.</h2><p>Move through the product archive: on-body fit, industrial form, human testing, sensor contact, and the local-compute concept. These renders are visual design studies, not photographs of shipping hardware.</p></div>
+        <div className="split-heading"><h2>A closer look at Vanta One.</h2><p>Explore the proposed fit, sensing interface, and local processing core. All images in this collection are concept renders; they do not document shipping hardware or completed user testing.</p></div>
         <VisualArchive />
       </section>
 
       <section className="section product-system-section">
         <div className="section-index">04 — SYSTEM ARCHITECTURE</div>
-        <div className="split-heading"><h2>Three layers.<br/>One quiet system.</h2><p>The technical diagrams remain where they are strongest: explaining the concept stack behind the photorealistic product story—sensing at the body, interpretation on the device, and contextual response around the user.</p></div>
+        <div className="split-heading"><h2>Three layers.<br/>One quiet system.</h2><p>The proposed system connects sensing at the body, interpretation on the device, and a response in the surrounding environment. Explore how those layers could work together while the wearer remains in control.</p></div>
         <ExplodedProduct />
         <div className="spec-strip">{designTargets.map(item => <div key={item.label}><strong>{item.value}</strong><span>{item.label}</span><small>{item.note}</small></div>)}</div>
       </section>
 
       <section className="human-loop">
-        <img src="/media/vanta-testing-office.png" alt="Professional testing a Vanta One concept wearable at a signal-analysis workstation" />
+        <ProductStudyImage src="/media/vanta-testing-office.webp" alt="Professional testing a Vanta One concept wearable at a signal-analysis workstation" />
         <div className="human-loop-shade" />
         <div className="human-loop-copy">
           <div className="section-index">05 — HUMAN IN THE LOOP</div>
@@ -88,13 +89,13 @@ export default function Home() {
 
       <section className="section contexts-section">
         <div className="section-index">07 — THE ENVIRONMENT</div>
-        <div className="split-heading"><h2>One wearable. Different cognitive environments.</h2><p>Deep work, creative exploration, and recovery are shown as separate visual worlds so the adaptive thesis feels human rather than purely technical.</p></div>
+        <div className="split-heading"><h2>One wearable. Different cognitive environments.</h2><p>A focused workspace, a creative session, a quieter moment. Explore three illustrative settings for an environment that could adapt to the way you want to spend your attention.</p></div>
         <ContextGallery />
       </section>
 
       <section className="privacy-section-home">
         <div className="privacy-visual hybrid-privacy-visual">
-          <img className="privacy-photo" src="/media/vanta-core-cutaway.png" alt="Photorealistic cutaway concept showing local electronics inside the Vanta One wearable" />
+          <ProductStudyImage className="privacy-photo" src="/media/vanta-core-cutaway.webp" alt="Photorealistic cutaway concept showing local electronics inside the Vanta One wearable" />
           <img className="privacy-diagram" src="/product/privacy-core.svg" alt="Diagram of local-first encrypted processing architecture" />
         </div>
         <div className="privacy-copy"><div className="section-index">08 — SOVEREIGN INTELLIGENCE</div><h2>Your mind is not a data source.</h2><p>The concept is local-first by design: raw neural signals should not become advertising inventory. Vanta’s privacy thesis is that calibration, inference, and erase controls belong with the user.</p><div className="principle-list">{principles.map(([title,copy],i)=><div key={title}><span>0{i+1}</span><div><strong>{title}</strong><p>{copy}</p></div></div>)}</div><Link className="text-button" href="/privacy">Read the privacy architecture ↗</Link></div>

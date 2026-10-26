@@ -1,5 +1,8 @@
 "use client";
 
+import { ProductStudyImage } from "@/components/ProductStudyImage";
+
+
 import { useState } from "react";
 
 const visuals = [
@@ -8,35 +11,35 @@ const visuals = [
     label: "On-body study",
     title: "Designed to disappear behind the ear.",
     copy: "A low-profile wearable study focused on fit, discretion, and a quiet visual footprint rather than headset-like bulk.",
-    image: "/media/vanta-wear-close.png"
+    image: "/media/vanta-wear-close.webp"
   },
   {
     id: "product",
     label: "Industrial design",
-    title: "A believable object before it becomes an interface.",
-    copy: "Graphite, dark titanium, restrained light cues, and a geometry that reads as premium consumer hardware rather than science-fiction costume design.",
-    image: "/media/vanta-product-studio.png"
+    title: "A discreet form for everyday wear.",
+    copy: "The concept combines a graphite finish, a dark titanium spine, and restrained status lights in a compact behind-the-ear form.",
+    image: "/media/vanta-product-studio.webp"
   },
   {
     id: "testing",
-    label: "Concept testing",
+    label: "Workday concept",
     title: "Built around the moments where attention matters.",
-    copy: "The product story is strongest when Vanta is shown in context: a person doing demanding work while the device stays visually secondary.",
-    image: "/media/vanta-testing-office.png"
+    copy: "An illustrative workspace explores how the proposed wearable could fit into a working day with minimal on-screen interaction. This is a concept scene, not a record of completed testing.",
+    image: "/media/vanta-testing-office.webp"
   },
   {
     id: "sensor",
     label: "Sensor interface",
     title: "Contact without spectacle.",
     copy: "Macro studies explore how non-invasive sensor contact could sit against the ear while preserving a refined, wearable form factor.",
-    image: "/media/vanta-sensor-macro.png"
+    image: "/media/vanta-sensor-macro.webp"
   },
   {
     id: "core",
     label: "Local intelligence",
-    title: "The compute story stays close to the user.",
+    title: "Personal processing, close to the wearer.",
     copy: "A cutaway concept visualizes the privacy thesis: signal interpretation and personal calibration should happen locally whenever possible.",
-    image: "/media/vanta-core-cutaway.png"
+    image: "/media/vanta-core-cutaway.webp"
   }
 ] as const;
 
@@ -49,7 +52,7 @@ export function VisualArchive() {
   return (
     <div className="visual-archive">
       <div className="visual-archive-stage">
-        <img key={active.image} src={active.image} alt={`${active.title} Vanta One concept render`} />
+        <ProductStudyImage key={active.image} src={active.image} alt={`${active.title} Vanta One concept render`} />
         <div className="visual-archive-shade" />
         <div className="visual-archive-caption">
           <span>{active.label}</span>
@@ -67,7 +70,7 @@ export function VisualArchive() {
             className={visual.id === active.id ? "active" : ""}
             onClick={() => setActiveId(visual.id)}
           >
-            <img src={visual.image} alt="" aria-hidden="true" />
+            <ProductStudyImage thumbnail src={visual.image} alt="" aria-hidden="true" />
             <div><small>0{index + 1}</small><strong>{visual.label}</strong></div>
           </button>
         ))}

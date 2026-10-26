@@ -1,5 +1,8 @@
 "use client";
 
+import { ProductStudyImage } from "@/components/ProductStudyImage";
+
+
 import { useState } from "react";
 import { pillars } from "@/lib/data";
 
@@ -12,7 +15,7 @@ export function ExplodedProduct() {
     <div className="exploded-shell">
       <div className="exploded-visual">
         <div className="orbit orbit-one" /><div className="orbit orbit-two" />
-        <img key={item.image} src={item.image} alt={`${item.title} concept visualization`} />
+        <ProductStudyImage key={item.image} src={item.image} alt={`${item.title} concept visualization`} />
         <span className="visual-label">{item.index} / {item.title.toUpperCase()}</span>
       </div>
       <div className="exploded-controls">
